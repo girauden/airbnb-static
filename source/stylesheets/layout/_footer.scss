@@ -1,32 +1,33 @@
 .footer {
   font-size: 13px;
   padding: 40px 0;
-  background-color: #333;
-  color: #eee;
+  background-color: $gray-dark;
+  color: $gray-lighter;
   font-weight: lighter;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-.footer a {
+  a {
   font-size: 28px;
   color: #eee;
-}
+  }
 
-.footer a:hover {
-  color: #FAFF78;
-}
+  & a:hover {
+  color: $brand-warning;
+  }
 
-.footer p {
+  p {
   margin-bottom: 0;
   margin-right: 60px;
-}
+  }
 
-.footer li {
+  li {
   margin-right: 20px;
-}
+  }
 
-.footer ul {
+  ul {
   margin-left: 60px;
+  }
+
 }
