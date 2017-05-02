@@ -41,38 +41,21 @@ title: Le Wagon Middleman boilerplate
     <!-- Your cards code -->
     <div class="wrapper-cards text-center">
       <div class="container">
-      <h2>Your next trip</h2>
+        <h2>Your next trip</h2>
         <div class="row">
-          <div class="col-xs-12 col-sm-4">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-paris.jpg');">
-              <span>Paris</span>
-              <div class="card-description">
-                <h3>Seb's home</h3>
-                <p>Charming room with patio</p>
+          <% data.flats.each do |owner, flat| %>
+            <div class="col-xs-12 col-sm-4">
+              <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path flat.picture %>');">
+                <div class="card-category"><%= flat.city %></div>
+                <div class="card-description">
+                  <h3><%= flat.name %></h3>
+                  <p><%= flat.summary %></p>
+                </div>
+                <%= image_tag flat.owner_picture, class:"card-user avatar avatar-large" %>
+                <%= link_to "", "flats/#{owner}.html", class: "card-link" %>
               </div>
-              <img class="avatar img-circle" src="images/seb.jpg">
             </div>
-          </div>
-          <div class="col-xs-12 col-sm-4">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-brussels.jpeg');">
-              <span>Brussels</span>
-              <div class="card-description">
-                <h3>Anne's home</h3>
-                <p>Lovely house</p>
-              </div>
-              <img class="avatar img-circle" src="images/anne.jpg">
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-4">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-london.jpeg');">
-              <span>London</span>
-              <div class="card-description">
-                <h3>Romain's home</h3>
-                <p>Nice flat in Picadilly</p>
-              </div>
-              <img class="avatar img-circle" src="images/seb.jpg">
-            </div>
-          </div>
+          <% end %>
         </div>
       </div>
     </div>

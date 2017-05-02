@@ -5,19 +5,7 @@
   color: white;
   background-size: cover;
   margin-bottom: 10px;
-
-  span {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  font-size: 18px;
-  }
-
-  img {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  }
+  text-align: justify;
 
   h3 {
   font-size: 18px;
@@ -32,8 +20,29 @@
   }
 }
 
+.card-category {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 18px;
+}
+
 .card-description {
   position: absolute;
   bottom: 10px;
   left: 10px;
+}
+
+.card-user {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
